@@ -1,4 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700259350
-icon.svg::CompressedTexture2D::8357749883449510044::1700255728::1700255728::1::::<><>::
-README.md::TextFile::-1::1700255105::0::1::::<><>::
+::res://::1700284230
+Area2D.gd::GDScript::-1::1700280166::0::1::::<>Area2D<>::
+icon.svg::CompressedTexture2D::8357749883449510044::1700275850::1700275927::1::::<><>::
+Player.gd::GDScript::-1::1700284204::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6021356185403068749::1700284230::0::1::::<><>::res://Player.gd<>uid://drcs6i67d0wam::::res://icon.svg
+README.md::TextFile::-1::1700275850::0::1::::<><>::
+wall.png::CompressedTexture2D::1518789646991716028::1700276513::1700276515::1::::<><>::
+::res://Assets/::1700283536
+::res://Scenes/::1700284230
+Mob.tscn::PackedScene::57609985171300534::1700284230::0::1::::<><>::uid://drcs6i67d0wam::::res://icon.svg
+World.tscn::PackedScene::3844237681620434655::1700284230::0::1::::<><>::uid://cr114ejqeqje8::::res://Player.tscn<>uid://253fhiedxu1::::res://Scenes/Mob.tscn
+::res://Scripts/::1700283540

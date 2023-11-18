@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://253fhiedxu1"]
+
+[ext_resource type="Texture2D" uid="uid://drcs6i67d0wam" path="res://icon.svg" id="1_p2hhp"]
+
+[sub_resource type="GDScript" id="GDScript_0ik0t"]
+script/source = "extends CharacterBody2D
+
+class_name Enemy
+
+var health : float = 100.0
+var speed : float = 200.0
+var target : PlayerCharacter
+
+func _physics_process(delta):
+	if target == null: target = get_tree().get_nodes_in_group(\"Player\")[0]
+	if target != null:
+		velocity = position.direction_to(target.position) * speed
+		move_and_slide()
+		look_at(target.global_position)
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1efxa"]
+radius = 13.0384
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+script = SubResource("GDScript_0ik0t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.72549, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_p2hhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1efxa")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
