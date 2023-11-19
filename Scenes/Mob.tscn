@@ -11,7 +11,7 @@ var health : float = 100.0
 var speed : float = 200.0
 var target : PlayerCharacter
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if target == null: target = get_tree().get_nodes_in_group(\"Player\")[0]
 	if target != null:
 		velocity = position.direction_to(target.position) * speed
